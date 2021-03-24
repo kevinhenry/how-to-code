@@ -4,7 +4,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-// import data from './data.json';
+import data from './data.json';
 
 class App extends React.Component {
   // state: lets us store information within a component that's going to change
@@ -19,8 +19,8 @@ class App extends React.Component {
       showModal: false
     };
 
-  //   console.log(data.map(beast => beast.title));
-  // }
+    console.log(data.map(beast => beast.title));
+  }
 
   buttonClicked = () => {
     console.log('button clicked!');
@@ -41,9 +41,9 @@ class App extends React.Component {
     this.setState({showModal: false})
   }
 
-  // // jsx is weird!
+  // jsx is weird!
   render() {
-  //   // TODO: use map
+    // TODO: use map
     let exclamationPoints = '';
     for (let i = 0; i < this.state.numberOfExclamationPoints; i++) {
       exclamationPoints += '!';
